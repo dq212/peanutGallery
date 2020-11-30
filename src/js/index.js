@@ -277,7 +277,7 @@ initAnimation = function () {
       },
       '-=' + getRandom(0.3, 1.2)
     )
-    .to('#l3t2', { duration: 0.1, x: 3, y: 5, rotation: -4 })
+    .to('#l3t2', { duration: 0.3, x: 3, y: 5, rotation: -4 })
     .to('#l3t2', { duration: 0.1, x: 0, y: 0, rotation: 0 }, '+=0.5');
 };
 
