@@ -54,7 +54,7 @@ initAnimation = function () {
     for (var i = 0; i < all.length; i++) {
       gsap.fromTo(
         all[i],
-        getRandom(0.1, 0.7),
+        getRandom(0.1, 0.4),
         {
           x: 200,
           y: -30,
@@ -376,8 +376,8 @@ rotateHome = function (obj) {
 startAnimation = function () {
   // Code for animation
 
-  TweenMax.delayedCall(1.2, setGroups);
-  TweenMax.delayedCall(2, mainAnimation);
+  TweenMax.delayedCall(1, setGroups);
+  TweenMax.delayedCall(1.6, mainAnimation);
   // TweenMax.delayedCall(1, mainAnimation);
 };
 
