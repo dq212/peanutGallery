@@ -220,6 +220,8 @@ initAnimation = function () {
   timeline.pause();
 
   timeline
+
+    .to([w1, w2, w3], { x: 250, y: 250 }, '+=2')
     .to(w1, {
       duration: getRandom(0.1, 0.4),
       x: 0,
