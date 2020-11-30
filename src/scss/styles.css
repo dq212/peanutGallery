@@ -1,0 +1,23 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.abs-pos, #container, #bg, #l1t1, #l1t2, #l1t3, #l1t4, #l1t5, #l1t6, #l2t1, #l2t2, #l2t3, #l2t4, #l2t5, #l2t6, #l2t7, #l3t1, #l3t2, #l3t3, #l3t4, #l3t5 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 522px;
+  height: 522px;
+  overflow: hidden;
+}
+
+#bg {
+  background: url(../imgs/bg.svg) no-repeat;
+}
