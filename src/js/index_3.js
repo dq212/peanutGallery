@@ -10,10 +10,10 @@ for (var q = 0; q < allElements.length; q++) {
   if (el.id) {
     window[el.id] = document.getElementById(el.id);
     //separates what we don't want to hide initially
-    if (el.id !== 'container' && el.id !== 'bg') {
-      gsap.set(el, { autoAlpha: 0 });
-      ids.push(el);
-    }
+    //if (el.id !== 'container' && el.id !== 'bg') {
+    gsap.set(el, { autoAlpha: 0 });
+    ids.push(el);
+    // }
   }
 }
 
@@ -34,6 +34,8 @@ initAnimation = function () {
   var secondMax = 0.3;
 
   var all = [
+    '#container',
+    '#bg',
     '#l1t1',
     '#l1t2',
     '#l1t3',
@@ -240,10 +242,22 @@ initAnimation = function () {
 
   drop = function () {
     //Group 1
-    var t = new gsap.timeline({ delay: 0.1 });
+    var t = new gsap.timeline({ delay: 0 });
     t.addLabel('startIt', 0.0);
-    t.addLabel('dropIt', 0.2);
-    t.addLabel('bounceIt', 0.8);
+    t.addLabel('dropIt', 0);
+    t.addLabel('bounceIt', 0.5);
+    // gsap.set(
+    //   all,
+    //   {
+    //     duration: 0.3,
+    //     stagger: {
+    //       each: 0.1,
+    //       from: 'center',
+    //     },
+    //     autoAlpha: 1,
+    //   },
+    //   'startIt'
+    // );
     for (i = 0; i < all.length; i++) {
       gsap.set(all[i], { autoAlpha: 1 }, 'startIt');
     }
@@ -258,7 +272,7 @@ initAnimation = function () {
         rotation: 25,
         rotationX: 0,
         rotationY: 0,
-        ease: 'slow.out',
+        ease: 'slow(0., 0.4, false)',
       },
       'dropIt'
     )
@@ -274,7 +288,7 @@ initAnimation = function () {
           rotation: -37,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -291,7 +305,7 @@ initAnimation = function () {
           rotation: -10,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -307,7 +321,7 @@ initAnimation = function () {
           rotation: 26.3923206144176,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -323,7 +337,7 @@ initAnimation = function () {
           rotation: 35,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -356,7 +370,7 @@ initAnimation = function () {
           rotation: -20,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -372,7 +386,7 @@ initAnimation = function () {
           rotation: -19,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -389,7 +403,7 @@ initAnimation = function () {
           rotation: -20,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -406,7 +420,7 @@ initAnimation = function () {
           rotation: 62,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -423,7 +437,7 @@ initAnimation = function () {
           rotation: 20,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -439,7 +453,7 @@ initAnimation = function () {
           rotation: 62,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -459,7 +473,7 @@ initAnimation = function () {
           rotation: 20,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -475,7 +489,7 @@ initAnimation = function () {
           rotation: 43,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -492,7 +506,7 @@ initAnimation = function () {
           rotation: 5,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -508,7 +522,7 @@ initAnimation = function () {
           rotation: -44,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -524,7 +538,7 @@ initAnimation = function () {
           rotation: -25,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -540,7 +554,7 @@ initAnimation = function () {
           rotation: 79,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -556,7 +570,7 @@ initAnimation = function () {
           rotation: 5,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -572,7 +586,7 @@ initAnimation = function () {
           rotation: 32,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -588,7 +602,7 @@ initAnimation = function () {
           rotation: -55,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -604,7 +618,7 @@ initAnimation = function () {
           rotation: -17,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -620,7 +634,7 @@ initAnimation = function () {
           rotation: -85,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -636,7 +650,7 @@ initAnimation = function () {
           rotation: -2,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -652,7 +666,7 @@ initAnimation = function () {
           rotation: 35,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -668,7 +682,7 @@ initAnimation = function () {
           rotation: 41,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -686,7 +700,7 @@ initAnimation = function () {
           rotation: 5,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -702,7 +716,7 @@ initAnimation = function () {
           rotation: 4,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -718,7 +732,7 @@ initAnimation = function () {
           rotation: 25,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -734,7 +748,7 @@ initAnimation = function () {
           rotation: 86,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -750,7 +764,7 @@ initAnimation = function () {
           rotation: 5,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -766,7 +780,7 @@ initAnimation = function () {
           rotation: 39,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -782,7 +796,7 @@ initAnimation = function () {
           rotation: 10,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -798,7 +812,7 @@ initAnimation = function () {
           rotation: -76,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       )
@@ -814,7 +828,7 @@ initAnimation = function () {
           rotation: 5,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'dropIt'
       )
@@ -830,7 +844,7 @@ initAnimation = function () {
           rotation: 75,
           rotationX: 0,
           rotationY: 0,
-          ease: 'slow.out',
+          ease: 'slow(0., 0.4, false)',
         },
         'bounceIt'
       );

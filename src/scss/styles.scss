@@ -24,14 +24,11 @@ html {
 
 #container {
   @extend .abs-pos;
-  opacity: 1;
-  visibility: visible;
 }
 
 #bg {
   @extend .abs-pos;
-  opacity: 1;
-  visibility: visible;
+
   background: url(../imgs/bg.svg) no-repeat;
 }
 
