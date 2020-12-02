@@ -244,7 +244,7 @@ initAnimation = function () {
     //Group 1
     var t = new gsap.timeline({ delay: 0 });
     t.addLabel('startIt', 0.0);
-    t.addLabel('dropIt', 0);
+    t.addLabel('dropIt', 0.1);
     t.addLabel('bounceIt', 0.5);
     // gsap.set(
     //   all,
