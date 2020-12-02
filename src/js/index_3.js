@@ -33,8 +33,6 @@ initAnimation = function () {
   var secondMin = 0.2;
   var secondMax = 0.3;
 
-  gsap.set(['#container', '#bg'], { duration: 0.1, autoAlpha: 1 });
-
   var all = [
     '#l1t1',
     '#l1t2',
@@ -239,6 +237,7 @@ initAnimation = function () {
   };
 
   setDropFrame();
+  gsap.set(['#container', '#bg'], { duration: 0.1, autoAlpha: 1 });
 
   drop = function () {
     //Group 1
