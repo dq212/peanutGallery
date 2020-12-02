@@ -10,10 +10,10 @@ for (var q = 0; q < allElements.length; q++) {
   if (el.id) {
     window[el.id] = document.getElementById(el.id);
     //separates what we don't want to hide initially
-    //if (el.id !== 'container' && el.id !== 'bg') {
-    gsap.set(el, { autoAlpha: 0 });
-    ids.push(el);
-    // }
+    if (el.id !== 'container' && el.id !== 'bg') {
+      gsap.set(el, { autoAlpha: 0 });
+      ids.push(el);
+    }
   }
 }
 
@@ -34,8 +34,6 @@ initAnimation = function () {
   var secondMax = 0.3;
 
   var all = [
-    '#container',
-    '#bg',
     '#l1t1',
     '#l1t2',
     '#l1t3',
@@ -259,7 +257,7 @@ initAnimation = function () {
     //   'startIt'
     // );
     for (i = 0; i < all.length; i++) {
-      gsap.set(all[i], { autoAlpha: 1 }, 'dropIt');
+      gsap.to(all[i], 0.6, { autoAlpha: 1 }, 'dropIt');
     }
     t.to(
       '#l1t1',
