@@ -259,7 +259,7 @@ initAnimation = function () {
     //   'startIt'
     // );
     for (i = 0; i < all.length; i++) {
-      gsap.set(all[i], { autoAlpha: 1 }, 'startIt');
+      gsap.set(all[i], { autoAlpha: 1 }, 'dropIt');
     }
     t.to(
       '#l1t1',
