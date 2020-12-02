@@ -29,7 +29,7 @@ initAnimation = function () {
   var w3 = ['#l3t1', '#l3t3', '#l3t4', '#l3t5'];
 
   var minTime = 0.6;
-  var maxTime = 0.75;
+  var maxTime = 0.7;
   var secondMin = 0.2;
   var secondMax = 0.3;
 
@@ -245,7 +245,7 @@ initAnimation = function () {
     var t = new gsap.timeline({ delay: 0 });
     t.addLabel('startIt', 0.0);
     t.addLabel('dropIt', 0.1);
-    t.addLabel('bounceIt', 0.5);
+    t.addLabel('bounceIt', 0.6);
     // gsap.set(
     //   all,
     //   {
