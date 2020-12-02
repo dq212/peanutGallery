@@ -10,10 +10,10 @@ for (var q = 0; q < allElements.length; q++) {
   if (el.id) {
     window[el.id] = document.getElementById(el.id);
     //separates what we don't want to hide initially
-    if (el.id !== 'container' && el.id !== 'bg') {
-      gsap.set(el, { autoAlpha: 0 });
-      ids.push(el);
-    }
+    // if (el.id !== 'container' && el.id !== 'bg') {
+    gsap.set(el, { autoAlpha: 0 });
+    ids.push(el);
+    //}
   }
 }
 
@@ -32,6 +32,8 @@ initAnimation = function () {
   var maxTime = 0.7;
   var secondMin = 0.2;
   var secondMax = 0.3;
+
+  gsap.set(['#container', '#bg'], { duration: 0.1, autoAlpha: 1 });
 
   var all = [
     '#l1t1',

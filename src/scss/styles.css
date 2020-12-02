@@ -26,7 +26,5 @@ html {
 }
 
 #bg {
-  opacity: 1;
-  visibility: visible;
   background: url(../imgs/bg.svg) no-repeat;
 }
