@@ -18,14 +18,20 @@ html {
   width: $width;
   height: $height;
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #container {
   @extend .abs-pos;
+  opacity: 1;
+  visibility: visible;
 }
 
 #bg {
   @extend .abs-pos;
+  opacity: 1;
+  visibility: visible;
   background: url(../imgs/bg.svg) no-repeat;
 }
 
