@@ -1,0 +1,91 @@
+$width: 522px;
+$height: 522px;
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// 100% width and height elements that can be positioned easily absolutely
+.abs-pos {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#container {
+  @extend .abs-pos;
+  opacity: 1;
+  visibility: visible;
+}
+
+#bg {
+  @extend .abs-pos;
+  background: url(../imgs/bg.svg) no-repeat;
+}
+
+#l1t1 {
+  @extend .abs-pos;
+}
+#l1t2 {
+  @extend .abs-pos;
+}
+#l1t3 {
+  @extend .abs-pos;
+}
+#l1t4 {
+  @extend .abs-pos;
+}
+#l1t5 {
+  @extend .abs-pos;
+}
+#l1t6 {
+  @extend .abs-pos;
+}
+
+#l2t1 {
+  @extend .abs-pos;
+}
+#l2t2 {
+  @extend .abs-pos;
+}
+#l2t3 {
+  @extend .abs-pos;
+}
+#l2t4 {
+  @extend .abs-pos;
+}
+#l2t5 {
+  @extend .abs-pos;
+}
+#l2t6 {
+  @extend .abs-pos;
+}
+#l2t7 {
+  @extend .abs-pos;
+}
+
+#l3t1 {
+  @extend .abs-pos;
+}
+#l3t2 {
+  @extend .abs-pos;
+}
+#l3t3 {
+  @extend .abs-pos;
+}
+#l3t4 {
+  @extend .abs-pos;
+}
+#l3t5 {
+  @extend .abs-pos;
+}
